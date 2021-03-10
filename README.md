@@ -8,14 +8,15 @@ Implemented an arbitrary r/w primitive based on [cicuta\_virosa](https://github.
 
 # Warranty
 
-**Use it on your own risk**. I build it for security researchers only. **MEAN NOTHING** to normal user.
+**Use it on your own risk**. I build it for security researchers only. **MEAN NOTHING** to normal users.
 
 **DO NOT RUN IT** on you main device. I can not promise **WHAT WILL HAPPEN!**
 
 # Current state
 
+- [x] make the exploit faster (iPhone 12: 65s -> 10s, iPhone 6s: 188s -> 68s)
 - [x] stable kernel r/w primitives
-- [x] ~~amfid bypass~~ Implement it by yourself. Bad guys could use this to distribute malicious code directly.
+- [x] ~~amfid bypass~~ Implement it by yourself. Bad guys would use this to distribute malicious code directly.
 
 Tested on iPhone 12 pro (**iOS 14.3**).
 
@@ -23,7 +24,9 @@ Tested on iPhone 11 (**iOS 14.0**).
 
 Tested on iPhone 6s (**iOS 14.0**). Maybe helpful to A11 devices. I note that checkra1n said "Limited support for A11 devices on iOS 14.x".
 
-For other devices/iOSs, add kernel offsets yourself in k\_offsets.c
+~~For other devices/iOSs, add kernel offsets yourself in k\_offsets.c~~
+
+Eliminate hardcoded variable offsets from kernelcache. No need to care about the offset things. Theoretically, works on every iOS \[14.0 ~ 14.3\] device.
 
 # Credits
 
